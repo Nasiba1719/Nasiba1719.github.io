@@ -1,0 +1,1392 @@
+/** Fonts **/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Raleway:wght@100;200;300;400;700&display=swap');
+
+/**GENERAL SETTINGS**/
+:root {
+    --primary-font: 'Raleway', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+    --primary-color: #17daa3;
+
+}
+
+html {
+    font-family: var(--primary-font);
+    font-size: 18px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    min-height: 100vh;
+}
+
+
+p {
+    color: #87949e;
+    font-size: 18px;
+    font-family: var(--primary-font);
+    line-height: 1.6;
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #576671;
+    font-family: var(--secondary-font);
+
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+a {
+    text-decoration: none;
+    transition: all .4s ease;
+}
+
+img {
+
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+
+/**MAIN AREA SECTION**/
+#mainArea {
+    padding-top: 0rem;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    background-size: cover;
+    display: flex;
+    margin: 0;
+    width: 100%;
+    padding-bottom: 0;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+
+}
+
+.slider .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+.slider .slide.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+}
+
+.slider .slide img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .slide .info {
+    position: absolute;
+    text-align: center;
+    padding-top: 250px;
+    letter-spacing: 2px;
+    padding-left: 310px;
+}
+
+
+
+.arrows {
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slider:hover .arrows {
+    opacity: 1;
+}
+
+.down-arrow {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slider:hover .down-arrow {
+    opacity: 1;
+}
+
+.arrows i {
+    border: solid #7e8b8c;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 20px;
+}
+
+.left {
+    transform: rotate(135deg);
+}
+
+.right {
+    transform: rotate(-45deg);
+}
+
+.down-arrow {
+    position: absolute;
+    margin-left: 41rem;
+}
+
+.down-arrow i {
+    border: solid #7e8b8c;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 20px;
+
+}
+
+.down-arrow .down {
+    transform: translateY(-170%) rotate(45deg);
+}
+
+
+
+.prev-btn,
+.next-btn {
+    z-index: 999;
+    cursor: pointer;
+    padding: 40px;
+}
+
+.navigation-visibility {
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+
+}
+
+.navigation-visibility .slide-icon {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: solid #fff 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+    z-index: 999;
+    transform: translateY(-180px);
+}
+
+.navigation-visibility .slide-icon.active {
+    background: #fff;
+}
+
+.navigation-visibility img {
+    opacity: 0;
+}
+
+
+
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    background-color:
+        rgba(23, 218, 163, 0.73);
+    position: fixed; /*position: sticky*/
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+.nav-list {
+    display: flex;
+
+}
+
+.nav-item {
+    padding: 0 2rem;
+}
+
+.nav-list li :last-child {
+    padding-right: 0;
+}
+
+
+.nav-item a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all .4s ease;
+}
+
+.nav-item a:hover {
+    color: var(--primary-color);
+}
+
+
+/**NAVBAR TOGGLER BUTTON**/
+.navbar-toggler {
+    font-size: 1rem;
+    position: absolute;
+    right: 2.5rem;
+    z-index: 100;
+    display: none;
+}
+
+.navbar-toggler .line {
+    width: 2rem;
+    height: .25rem;
+    background-color: #5a5b5a;
+    margin: .5rem;
+    transition: all .4s ease;
+}
+
+
+
+h1 {
+    font-size: 60px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.alecto-thin {
+    font-weight: 100;
+}
+
+.Alectodown {
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.Learn-more {
+    margin-top: 60px;
+    padding: 5px 20px 5px 20px;
+}
+
+.Learn-more a {
+    border: 2px solid;
+    font-size: 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 8px 25px;
+    transition: all .4s ease;
+}
+
+.Learn-more a:hover {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+/**END MAIN AREA SECTION**/
+
+
+
+
+/** ABOUT US SECTION**/
+#aboutUs .container {
+    text-align: center;
+}
+
+
+h2 {
+    font-size: 60px;
+    font-weight: 50;
+}
+
+
+.paragrapgh {
+    font-size: 18px;
+    color: #87949e;
+    margin: 40px auto 155px auto;
+}
+
+
+.row {
+    display: flex;
+}
+
+.col-3 .roket,
+.col-3 .activity,
+.col-3 .graduation,
+.col-3 .atom {
+    margin-bottom: 39px;
+}
+
+
+.roket,
+.activity,
+.graduation,
+.atom {
+    background-color: #edeff1;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all .4s ease;
+}
+
+.roket:hover,
+.activity:hover,
+.graduation:hover,
+.atom:hover {
+    background-color: var(--primary-color);
+
+}
+
+
+.col-3 .atom .fa-atom {
+    padding-top: 30px;
+    width: 35px;
+    color: #87949e;
+    font-size: 35px;
+
+}
+
+.col-3 .roket img,
+.col-3 .activity img,
+.col-3 .graduation img {
+    padding-top: 35px;
+    width: 35px;
+}
+
+
+.col-3 h3 {
+    font-family: var(--secondary-font);
+    letter-spacing: 1px;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.col-3 {
+    padding-right: 20px;
+}
+
+
+.Learn-more-icon {
+    display: inline-block;
+    margin-top: 140px;
+}
+
+
+
+.Learn-more-icon a {
+    font-size: 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: #17daa3;
+    text-decoration: none;
+    padding: 8px 25px;
+}
+
+.col-3 h3 {
+    color: #000000;
+}
+
+/**END ABOUT US SECTION**/
+
+
+
+
+/**LOREM SECTION**/
+
+#lorem-section {
+    background-color: #f9f9fa;
+}
+
+.lorem-info {
+    padding-left: 800px;
+    padding-right: 10px;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.lorem-info h2 {
+    padding-bottom: 25px;
+}
+
+.Learn-more-lorem {
+    margin-top: 60px;
+}
+
+
+.Learn-more-lorem a {
+    font-size: 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: #17daa3;
+    text-decoration: none;
+    padding: 8px 25px;
+}
+
+/**END LOREM SECTION**/
+
+
+
+
+/**DOLOR SECTION**/
+
+.dolor-info {
+
+    padding-left: 10px;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-family: var(--secondary-font);
+    font-weight: 300;
+}
+
+.dolor-info h2 {
+    padding-bottom: 25px;
+}
+
+.Learn-more-dolor {
+    margin-top: 70px
+}
+
+.Learn-more-dolor a {
+    font-size: 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: #17daa3;
+    text-decoration: none;
+    padding: 8px 25px;
+}
+
+/**END DOLOR SECTION**/
+
+
+
+/**ADAM SECTION**/
+
+#adam {
+    max-height: 500px;
+    background-image: url('../images/adam-imgs/Photo.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.adam-slider img {
+    background-color: #edeff1;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all .4s ease;
+
+}
+
+.adam-slider {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+
+}
+
+.adam-slider .adam-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 0 50%);
+    text-align: center;
+}
+
+.adam-slider .adam-slide.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+}
+
+
+.adam-slide .adam-info {
+    position: absolute;
+    text-align: center;
+    padding-top: 100px;
+    letter-spacing: 2px;
+    padding-left: 290px;
+}
+
+.adam-slider:hover .arrows {
+    opacity: 1;
+}
+
+
+.adam-info h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.adam-thin {
+    font-weight: 100;
+}
+
+.adamdown {
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/**END ADAM SECTION**/
+
+
+
+/**OUR SERVICES SECTION**/
+#our-services {
+
+    background-color: #f9f9fa;
+}
+
+.top {
+    text-align: center;
+}
+
+.col-4,
+.col-5 {
+    margin-bottom: 60px;
+}
+
+.left-icon,
+.right-icon {
+    width: 25%;
+    margin-top: 50px;
+}
+
+.services-general {
+    display: flex;
+}
+
+.portfolio,
+.branding,
+.design,
+.devolopment {
+    float: left;
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+
+#our-services .container img {
+    width: 20px;
+    padding-top: 5px;
+}
+
+.right-icon {
+    margin-left: 480px;
+}
+
+
+h3 {
+    font-size: 35px;
+    color: #576671;
+    letter-spacing: 3px;
+    font-family: Raleway-ExtraLight;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.info-icon {
+    text-align: left;
+    padding-left: 65px;
+    text-align: justify;
+    letter-spacing: 1px;
+    width: 541px;
+}
+
+/**END OUR SERVICES SECTION**/
+
+
+
+/**MEET SECTION**/
+
+.meet-imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.meet-img {
+    width: 100%;
+    height: 15rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.meet-img::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(45, 221, 172, 0.8);
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+.meet-img:hover::before {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.meet-img span {
+    font-size: 36px;
+    color: #fff;
+    position: relative;
+    z-index: 100;
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+.meet-img:hover span {
+    opacity: 1;
+}
+
+.top p {
+    margin-bottom: 100px;
+}
+
+.meet-img-1 {
+    background-image: url(../images/meet-img/1.jpg);
+}
+
+.meet-img-2 {
+    background-image: url(../images/meet-img/2.jpg);
+}
+
+.meet-img-3 {
+    background-image: url(../images/meet-img/3.jpg);
+}
+
+.meet-img-4 {
+    background-image: url(../images/meet-img/4.jpg);
+}
+
+.meet-img-5 {
+    background-image: url(../images/meet-img/5.jpg);
+}
+
+.meet-img-6 {
+    background-image: url(../images/meet-img/6.jpg);
+}
+
+.meet-img-7 {
+    background-image: url(../images/meet-img/7.jpg);
+}
+
+.meet-img-8 {
+    background-image: url(../images/meet-img/8.jpg);
+}
+
+.meet-img-9 {
+    background-image: url(../images/meet-img/9.jpg);
+}
+
+.meet-img-10 {
+    background-image: url(../images/meet-img/10.jpg);
+}
+
+/**END MEET SECTION**/
+
+
+/**PRICING SECTION**/
+
+#pricing {
+    background-color: #f9f9fa;
+}
+
+.column {
+    width: calc((100% - 75px) / 4);
+    height: 400px;
+    margin-right: 25px;
+    background-color: #fff;
+}
+
+.pricing-general {
+    display: flex;
+}
+
+
+
+.column:nth-last-child(1) {
+    margin-right: 0px;
+}
+
+.column p {
+    text-align: justify;
+    padding-right: 25px;
+    padding-bottom: 50px;
+}
+
+.up {
+    border-bottom: 1px solid rgba(135, 148, 158, 0.32);
+}
+
+
+.column h3 {
+    color: var(--primary-color);
+
+}
+
+.down img {
+
+    padding-left: 140px;
+}
+
+.down h4 {
+    height: 60px;
+    text-align: left;
+    font-size: 14px;
+
+    border: 1px solid transparent;
+    background-color: var(--primary-color);
+    padding-top: 15px;
+    color: #fff;
+    padding-left: 30px;
+}
+
+.up,
+.down p {
+    padding-left: 30px;
+    margin-top: 30px;
+}
+
+.down p {
+    padding-bottom: 50px;
+}
+
+
+
+/**DOLOR-MAP SECTION**/
+#dolor-map {
+    padding-top: 9rem;
+}
+
+.grid-sec {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+}
+
+.dolor-info p {
+    width: 550px;
+}
+
+/**END DOLOR-MAP SECTION**/
+
+
+/**SYMU SECTION**/
+#symu {
+    background-image: url(../images/footer-img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.symu-img {
+    text-align: center;
+    padding-top: 181px;
+}
+
+/**END SYMU SECTION**/
+
+
+/**FOOTER SECTION**/
+footer {
+    background-image: url(../images/footer\ section\ background.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+}
+
+.foot-general {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.foot-logo,
+.foot-right {
+    display: flex;
+    align-items: center;
+}
+
+.foot-right li a {
+    font-size: 14px;
+    color: #ccd2d6;
+    font-family: var(--secondary-font);
+    padding: 0 2rem;
+    transition: all .4s ease;
+}
+
+.foot-right li a:hover {
+    color: #87949e;
+}
+
+
+.foot-right li a :nth-last-child(1) {
+    padding-right: 0;
+
+}
+
+.foot {
+    padding-left: 10px;
+    font-size: 14px;
+    font-family: var(--primary-font);
+    color: #87949e;
+    font-weight: 500;
+}
+
+/**END FOOTER SECTION**/
+
+
+
+
+/** MEDIA QUERIES**/
+@media only screen and (max-width:992px) {
+    .navbar-toggler {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-list {
+        display: block;
+        position: absolute;
+        background-color: rgba(23, 218, 163, 0.73);
+        left: 0;
+        width: 30%;
+        height: 100vh;
+        transition: all .4s ease;
+        top: 4rem;
+        padding-top: 15px;
+        opacity: 1;
+        transform: translateX(-100%);
+    }
+
+    .nav-item {
+        padding-bottom: 30px;
+    }
+
+    .search {
+        opacity: 0;
+    }
+
+    .navbar {
+        justify-content: space-around;
+    }
+
+
+
+    .slider {
+        width: 100%;
+    }
+
+    .slider .slide .info {
+        position: relative;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /**.lorem {
+        padding-left: 200px;
+    }
+
+
+    .right-arrow {
+        position: absolute;
+        margin: -10rem 40.5rem;
+
+    }
+
+    .left-arrow {
+        position: absolute;
+        margin: -10rem;
+
+    }
+
+    .down-arrow {
+        margin: 2rem 15rem auto;
+        position: absolute;
+    }
+
+    .arrows i {
+        padding: 15px;
+    }**/
+
+
+
+
+
+    .lorem h1 {
+        font-size: 40px;
+    }
+
+    .lorem {
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        line-height: 30px;
+    }
+
+    h3 {
+        font-size: 25px;
+        color: #576671;
+        letter-spacing: 1px;
+        font-weight: 550;
+    }
+
+    .lorem-info {
+        padding-left: 0px;
+        padding-right: 15rem;
+    }
+
+
+
+    .lorem-info h2 {
+        letter-spacing: 1px;
+    }
+
+    .col-3 h3 {
+        font-family: var(--secondary-font);
+        letter-spacing: 1px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .top h2 {
+        padding-bottom: 25px;
+    }
+
+    .dolor-info h2 {
+        letter-spacing: 1px;
+    }
+
+
+
+
+
+    .adam-lorem h1 {
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+
+    .adam-lorem {
+        padding-left: 50px;
+    }
+
+    .right-arrow-ad {
+        position: absolute;
+        margin: -10rem 47rem;
+
+    }
+
+    .left-arrow-ad {
+        position: absolute;
+        margin: -10rem 13px;
+
+    }
+
+    .down-arrow-ad {
+        margin: 2rem 22rem auto;
+        position: absolute;
+    }
+
+    .arrows-adam i {
+        padding: 15px;
+    }
+
+
+
+
+    .left-icon,
+    .right-icon {
+        width: 0px;
+    }
+
+    .left-icon p {
+        width: 65%;
+    }
+
+    .right-icon p {
+        width: 65%;
+    }
+
+    .down img {
+        padding-left: 25px;
+
+    }
+
+    .down h4 {
+        height: 50px;
+        padding-top: 10px;
+        font-size: 13px;
+    }
+
+    .down p {
+        font-size: 13px;
+
+    }
+
+    .up p {
+        font-size: 13px;
+    }
+
+    .dolor-general {
+
+        display: inline;
+    }
+
+    .Learn-more-dolor {
+        margin-bottom: 50px;
+        margin-top: 50PX;
+    }
+
+    .img-map {
+        max-width: 80%;
+    }
+
+
+    .foot-logo p {
+        font-size: 12px;
+    }
+
+    .foot-right li a {
+        font-size: 12px;
+    }
+}
+
+
+
+@media only screen and (max-width:768px) {
+    .lorem h1 {
+        font-size: 30px;
+        letter-spacing: 0.5px;
+    }
+
+
+    .lorem {
+        padding-top: 170px;
+    }
+
+    .lorem p {
+        font-size: 14px;
+        padding-top: 6px;
+    }
+
+    #aboutUs {
+        padding-top: 1rem;
+    }
+
+    .Learn-more-icon {
+        margin-top: 100px;
+    }
+
+    .Alectodown {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+
+
+    .images img {
+        height: 600px;
+        width: 778px;
+
+    }
+
+
+    .lorem {
+        padding-left: 150px;
+    }
+
+
+    .right-arrow {
+        margin: -7rem 29.5rem;
+
+    }
+
+    .left-arrow {
+
+        margin: -7rem;
+
+    }
+
+    .down-arrow {
+        margin: 2rem 11rem auto;
+        position: absolute;
+    }
+
+    .arrows i {
+        padding: 15px;
+    }
+
+
+
+
+
+
+
+
+
+    .Learn-more a {
+
+        padding: 6px 18px;
+    }
+
+
+    .top h2 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+
+    .top .paragrapgh {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+
+    }
+
+    .col-3 p {
+        margin-bottom: 50px;
+    }
+
+    .lorem-info {
+        padding-left: 10px;
+        text-align: justify;
+        letter-spacing: 1px;
+        width: 600;
+    }
+
+    .lorem-info p {
+        line-height: 35px;
+    }
+
+    .lorem-info h2 {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    .dolor-info h2 {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    .dolor-info p {
+        line-height: 35px;
+    }
+
+
+
+
+    .adamdown {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+
+
+    .adam-lorem {
+        padding-left: 100px;
+    }
+
+
+    .right-arrow-ad {
+        margin: -4rem 33rem;
+
+    }
+
+    .left-arrow-ad {
+
+        margin: -4rem;
+
+    }
+
+    .down-arrow-ad {
+        margin: 4rem 15.5rem auto;
+        position: absolute;
+    }
+
+    .arrows-lorem i {
+        padding: 10px;
+    }
+
+
+    .adam-lorem h1 {
+        font-size: 18px;
+    }
+
+    .adamdown {
+        font-size: 14px;
+    }
+
+
+
+
+
+
+    .services-general {
+        display: inline;
+
+    }
+
+    .right-icon {
+        margin-left: 0px;
+    }
+
+    .pricing-general {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        align-items: center;
+    }
+
+
+    .column {
+        width: 93%;
+        height: 450px;
+        background-color: #fff;
+
+    }
+
+    .down h4 {
+        height: 50px;
+        font-size: 12px;
+    }
+
+    .down img {
+        opacity: 0;
+    }
+
+    .dolor-general {
+
+        display: inline;
+    }
+
+    .Learn-more-dolor {
+        margin-bottom: 50px;
+        margin-top: 50PX;
+    }
+
+
+    .dolor-info h2 {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    .dolor-info p {
+        line-height: 35px;
+        width: 400px;
+    }
+
+
+    .symu-img h1 {
+        font-size: 30px;
+    }
+
+    .foot-general {
+        display: inline;
+    }
+
+    .foot-right li a {
+        font-size: 13px;
+        padding: 0 1rem;
+    }
+
+    .foot-right {
+        margin-top: 30px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar-active {
+    transform: translateX(0%);
+}
+
+.toggle .line1 {
+    transform: rotate(-50deg) translate(-8px, 11px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(50deg) translate(-8px, -11px);
+}
